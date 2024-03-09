@@ -6,6 +6,20 @@
 
 _(this does not currently work as the package is yet to be crawled by `npms.io`)_
 
+```
+cd ~/Library/Application\ Support/Kap/plugins/
+
+npm remove kap-camera
+
+git clone https://github.com/clearlysid/kap-cam
+
+npm link ./kap-cam
+
+sed -i '' 's/"dependencies": {/"dependencies": {\n    "kap-cam": "latest",/' package.json
+
+npm link
+```
+
 1. Open Kap `Preferences`
 2. Select the `Plugins` pane, and switch to `Discover` tab.
 3. In the list of plugins, find `cam` and toggle it on.
